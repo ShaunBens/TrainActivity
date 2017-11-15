@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+
+<body>
+    <!--Jumbotron row-->
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg 12">
+            <div class="container">
+                <div class="jumbotron">
+                    <img src="./assets/images/timemachine.png" class="center-block">
+                    <p style="color: white; text-align: center; font-weight: bold; text-shadow: 1px .5px black; font-size: 18px"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Train Time Row-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-md-8 col-lg-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color: #ff6600">
+                        <h3 class="panel-title" style="color: white; text-shadow: 1px .5px black">Current Train Schedule</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency(min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody id="inputValues">
+                                <!--Javascript will insert our rows and data here-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--Enter a Train row-->
+
+            <div class="col-xs-4 col-md-4 col-lg-4">
+                <!--<div class="container">-->
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color: #ff6600">
+                        <h3 class="panel-title" style="color: white; text-shadow: 1px .5px black">Add a Train!</h3>
+                        <!--<h3 class="panel-title" style="color: white; text-shadow: 1px .5px black; float: right">Current Time</h3>-->
+                    </div>
+                    <div class="panel-body">
+                        <form id="trainInfo">
+                            <label>Train Name</label>
+                            <input type="text" class="form-control" placeholder="Enter a Train Name" id="train-input" required /><br>
+                            <label>Destination</label>
+                            <input type="text" class="form-control" placeholder="Destination" id="destination-input" required /><br>
+                            <label>First Train Time (Military Time HH:MM)</label>
+                            <input type="text" class="form-control" placeholder="First Train Time" id="first-train-time" required /><br>
+                            <label>Frequency (min)</label>
+                            <input type="text" class="form-control" placeholder="Frequency" id="train-frequency" required /><br>
+                            <button type="submit" class="btn btn-primary" id="searchBTN" value="Submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+    <script src="./assets/brains.js"></script>
+
+</body>
+
+</html>

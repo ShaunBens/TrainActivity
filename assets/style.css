@@ -1,0 +1,21 @@
+.jumbotron {
+    background-image: url("../assets/images/trainBG.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: static;
+    max-height: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.panel-heading {
+    background: lightblue;
+}
