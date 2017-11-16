@@ -7,9 +7,8 @@
     max-height: auto;
     padding-top: 2px;
     padding-bottom: 2px;
+    background-color: inherit;
 }
-
-
 
 img {
     max-width: 100%;

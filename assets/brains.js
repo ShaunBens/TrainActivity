@@ -55,7 +55,7 @@ $(function() { //Document Ready Begin
 
     database.ref().on("child_added", function(snapshot) {
 
-        // "s" is for saved as in Saved Data
+        // "s" is for saved as in Saved Data from firebase
 
         var sName = snapshot.val().name;
         var sDest = snapshot.val().dest;
@@ -64,11 +64,9 @@ $(function() { //Document Ready Begin
 
         console.log("Name: " + sName);
         console.log("Destination: " + sDest);
-        console.log("First Train Time: " + sFirstTime); //When it comes out of firebase, It is undefined???
+        console.log("First Train Time: " + sFirstTime);
         console.log("Frequency: " + sFreq);
 
-
-        // sFreq = parseInt(sFreq);
 
 
         var trainTime = moment(sFirstTime, "HH:mm").subtract(1, "years");
@@ -85,9 +83,7 @@ $(function() { //Document Ready Begin
         console.log("Minutes until next train: " + minsAway);
 
         var nextTrain = moment().add(minsAway, "minutes").format("HH:mm A");
-        // console.log("Arrival Time: " + nextTrain.format("HH:mm A"));
-
-
+        console.log("Arrival Time: " + nextTrain.format("HH:mm A"));
 
 
         var newRow = $("<tr>");
