@@ -3,7 +3,6 @@
 // Initialize Firebase
 $(function() { //Document Ready Begin
 
-
     var config = {
         apiKey: "AIzaSyCoRgsJXAXHG6eofsBnYKPfgwQtnvYPAdE",
         authDomain: "traintime-7d544.firebaseapp.com",
@@ -14,10 +13,16 @@ $(function() { //Document Ready Begin
     };
     firebase.initializeApp(config);
 
-    var database = firebase.database();
-    var currentTime = moment();
-    $("p").text(currentTime);
+    $('#clock').text();
 
+    function update() {
+        $('#clock').html(moment().format('MMMM DD YYYY H:mm:ss'));
+    }
+
+    setInterval(update, 1000);
+
+
+    var database = firebase.database();
 
     $("#searchBTN").on("click", function(event) {
         event.preventDefault();
